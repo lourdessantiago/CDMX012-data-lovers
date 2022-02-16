@@ -10,7 +10,7 @@ import data from './data/pokemon/pokemon.js';
  function mostrarCaracteristicas(item){
      return ` <section class="card">
      <img src="${item.img}" alt="" srcset="">
-     <h2>${item.num}</h2>
+     <h4>${item.num}</h4>
      <h3>${item.name}</h3>
    </section>`
  }

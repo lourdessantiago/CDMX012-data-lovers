@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.contenedorTarjetas{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap:20px;
+}
+
+.card{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-image: url("https://i.pinimg.com/564x/8f/fc/15/8ffc157a0f9b7b2964855e51a4992981.jpg");
+    border-radius: 30px;
+    font-family: Roboto;
+    text-align: center;
+    padding: 20px;
+    color: aliceblue;
+}
