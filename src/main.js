@@ -18,7 +18,6 @@ console.log("prueba")
 allPokemon.innerHTML=dataDePokemon.map(mostrarCaracteristicas).join(" ");
 
 //Para el botón ascendente
-ascendente.addEventListener('click',function(){
-  alert("este boton funciona");
-});
+ascendente.addEventListener('click',example(dataDePokemon));
+
 
