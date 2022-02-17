@@ -2,7 +2,7 @@
 import { example } from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
-
+//Para mostrar las tarjetas de Pokemon en la pantalla
  const dataDePokemon = data.pokemon;
  console.log(dataDePokemon);
  let allPokemon=document.getElementById("allpokemon")
@@ -16,3 +16,9 @@ import data from './data/pokemon/pokemon.js';
  }
 console.log("prueba")
 allPokemon.innerHTML=dataDePokemon.map(mostrarCaracteristicas).join(" ");
+
+//Para el botón ascendente
+ascendente.addEventListener('click',function(){
+  alert("este boton funciona");
+});
+
