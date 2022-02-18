@@ -15,7 +15,19 @@ export const example = dataDePokemon => {
   return ordenar;
 };
 
-export const anotherExample = () => {
-  return 'OMG';
+export const anotherExample = dataDePokemon => {
+  let ordenarInverso = dataDePokemon.sort((a, b) => {
+    if (a.name > b.name) {
+      return -1;
+    }
+    if (a.name < b.name) {
+      return 1;
+    }
+    if (a == b) {
+      return 0;
+    }
+  });
+  return ordenarInverso;
+  
 };
 //items.sort(function (a, b) {
