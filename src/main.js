@@ -4,6 +4,7 @@ import { example } from './data.js';
 import data from './data/pokemon/pokemon.js';
 //Para mostrar las tarjetas de Pokemon en la pantalla
  const dataDePokemon = data.pokemon;
+ const ascendente = document.querySelector('#ascendente')
  console.log(dataDePokemon);
  let allPokemon=document.getElementById("allpokemon")
  
@@ -14,10 +15,16 @@ import data from './data/pokemon/pokemon.js';
      <h3>${item.name}</h3>
    </section>`
  }
-console.log("prueba")
-allPokemon.innerHTML=dataDePokemon.map(mostrarCaracteristicas).join(" ");
-
+llenarTarjetas(dataDePokemon);
 //Para el botón ascendente
-ascendente.addEventListener('click',example(dataDePokemon));
+ascendente.addEventListener('click',()=>{
+  const pokemonOrden= example(dataDePokemon);
+llenarTarjetas(pokemonOrden);
+});
+//funcio de llenar de los pokemon
+function llenarTarjetas (arrayPokemon){
+  allPokemon.innerHTML=arrayPokemon.map(mostrarCaracteristicas).join(" ");
+
+}
 
 
