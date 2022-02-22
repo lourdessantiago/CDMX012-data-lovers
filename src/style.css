@@ -28,6 +28,7 @@ body{
     justify-content: space-evenly;
     gap:20px;
     box-sizing: border-box;
+    padding: 0.5%;
 }
 
 .card{
@@ -52,6 +53,7 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .ordenaz,
@@ -64,8 +66,12 @@ body{
     font-size: 18px;
     padding: 6px;
     border: 4px solid #E5E190;
-    width: 20%;
+    width: 24%;
     color: whitesmoke;
+}
+#pokebola {
+    width: 4%;
+    height: 4%;
 }
 .ordenaz:hover{
     background-color: #E5E190;
@@ -73,4 +79,20 @@ body{
 #descendente:hover{
     background-color: #E5E190;
 }
+
+@media only screen and (max-width: 600px) {
+    .contenedorbotones {
+      flex-direction: column;
+      gap:10px;
+    }
+    .ordenaz,
+    #descendente {
+        width: 80%;
+        font-size: 14px;
+    }
+    #pokebola{
+        width: 12%;
+        height: 12%;
+    }
+  }
 
