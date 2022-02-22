@@ -5,12 +5,20 @@
 
 body{
     width: 100%;
+    background-color: #21680F;
 }
 #encab{
     display: flex;
     flex-grow: 1;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
-
+#bannerencabezado{
+    
+    max-width: 100%;
+    display: inline-block;
+        
+}
 
 .contenedorTarjetas{
     display:flex;
@@ -27,7 +35,8 @@ body{
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-    background-image: url("https://i.pinimg.com/564x/8f/fc/15/8ffc157a0f9b7b2964855e51a4992981.jpg");
+    background-image: url(assets/fondocards2.png);
+    background-size: auto;
     border-radius: 30px;
     font-family: Roboto;
     text-align: center;
@@ -36,7 +45,7 @@ body{
 }
 
 .card:hover {
-    background: rgb(230, 230, 38);
+    background: #e5e190;
   }
 
 .contenedorbotones{
@@ -54,13 +63,14 @@ body{
     font-weight: bold;
     font-size: 18px;
     padding: 6px;
-    border: 4px solid #dfee14;
+    border: 4px solid #E5E190;
     width: 20%;
+    color: whitesmoke;
 }
 .ordenaz:hover{
-    background-color: #dfee14;
+    background-color: #E5E190;
 }
 #descendente:hover{
-    background-color: #dfee14;
+    background-color: #E5E190;
 }
 
