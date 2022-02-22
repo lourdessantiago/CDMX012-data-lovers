@@ -3,12 +3,23 @@
     padding: 0;
 }
 
+body{
+    width: 100%;
+}
+#encab{
+    display: flex;
+    flex-grow: 1;
+}
+
+
 .contenedorTarjetas{
     display:flex;
+    width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap:20px;
+    box-sizing: border-box;
 }
 
 .card{
@@ -27,3 +38,29 @@
 .card:hover {
     background: rgb(230, 230, 38);
   }
+
+.contenedorbotones{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.ordenaz,
+#descendente
+{
+    background-color: transparent;
+    border-radius: 18px;
+    font-family: roboto;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 6px;
+    border: 4px solid #dfee14;
+    width: 20%;
+}
+.ordenaz:hover{
+    background-color: #dfee14;
+}
+#descendente:hover{
+    background-color: #dfee14;
+}
+
