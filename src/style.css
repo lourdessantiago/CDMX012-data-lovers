@@ -1,3 +1,18 @@
+@keyframes pokebolaGiro{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+
+}
+#pokebola:hover{
+    animation-name: pokebolaGiro;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
 *{
     margin: 0;
     padding: 0;
