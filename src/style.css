@@ -95,6 +95,14 @@ body{
     background-color: #E5E190;
 }
 
+.ordenaz:focus{
+    background-color:red;
+}
+
+#descendente:focus{
+    background-color: red;
+}
+
 @media only screen and (max-width: 600px) {
     .contenedorbotones {
       flex-direction: column;
@@ -109,5 +117,9 @@ body{
         width: 12%;
         height: 12%;
     }
+  }
+
+  h3 {
+      text-transform: capitalize;
   }
 
