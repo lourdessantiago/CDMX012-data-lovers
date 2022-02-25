@@ -36,11 +36,13 @@ tipo.addEventListener('change', ()=>{
   const tipoPokemonSeleccionado = document.getElementById('tipo').value;
   const pokemonFiltrado = pokePorTipo (dataDePokemon,tipoPokemonSeleccionado);
   llenarTarjetas(pokemonFiltrado);
+  document.querySelector('#resistencia').value = 'null';
 })
 resistencia.addEventListener('change', ()=>{ 
   const tipoPokemonSeleccionado = document.getElementById('resistencia').value;
   const pokemonFiltrado = pokePorResistencia (dataDePokemon,tipoPokemonSeleccionado);
   llenarTarjetas(pokemonFiltrado);
+  document.querySelector('#tipo').value = 'null';
 })
 
 
