@@ -35,6 +35,11 @@ export const pokePorTipo = (dataDePokemon, tipoPokemonSeleccionado)=>{
    let filtroTipo = dataDePokemon.filter(item=>item.type.includes(tipoPokemonSeleccionado));
 return filtroTipo;
 }
+
+export const pokePorResistencia= (dataDePokemon, resistenciaPokeSeleccionada)=>{
+  let filtroResistencia =dataDePokemon.filter(item =>item.resistant.includes(resistenciaPokeSeleccionada));
+  return filtroResistencia;
+}
  
 
 //items.sort(function (a, b) {

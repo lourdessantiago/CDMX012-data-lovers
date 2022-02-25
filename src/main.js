@@ -2,6 +2,7 @@
 import { example } from './data.js';
 import { anotherExample } from './data.js';
 import { pokePorTipo } from './data.js';
+import { pokePorResistencia } from './data.js'
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 //Para mostrar las tarjetas de Pokemon en la pantalla
@@ -9,6 +10,7 @@ import data from './data/pokemon/pokemon.js';
  const ascendente = document.querySelector('#ascendente')
  const descendente = document.querySelector('#descendente')
  const tipo = document.querySelector('#tipo')
+ const resistencia = document.querySelector('#resistencia')
   //console.log(dataDePokemon);
  let allPokemon=document.getElementById("allpokemon")
  
@@ -35,6 +37,13 @@ tipo.addEventListener('change', ()=>{
   const pokemonFiltrado = pokePorTipo (dataDePokemon,tipoPokemonSeleccionado);
   llenarTarjetas(pokemonFiltrado);
 })
+resistencia.addEventListener('change', ()=>{ 
+  const tipoPokemonSeleccionado = document.getElementById('resistencia').value;
+  const pokemonFiltrado = pokePorResistencia (dataDePokemon,tipoPokemonSeleccionado);
+  llenarTarjetas(pokemonFiltrado);
+})
+
+
 
 //funcio de llenar de los pokemon
 function llenarTarjetas (arrayPokemon){
