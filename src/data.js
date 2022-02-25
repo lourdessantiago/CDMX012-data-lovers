@@ -30,4 +30,11 @@ export const anotherExample = dataDePokemon => {
   return ordenarInverso;
   
 };
+
+export const pokePorTipo = (dataDePokemon, tipoPokemonSeleccionado)=>{ 
+   let filtroTipo = dataDePokemon.filter(item=>item.type.includes(tipoPokemonSeleccionado));
+return filtroTipo;
+}
+ 
+
 //items.sort(function (a, b) {
