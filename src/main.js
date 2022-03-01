@@ -26,17 +26,23 @@ llenarTarjetas(dataDePokemon);
 ascendente.addEventListener('click',()=>{
   const pokemonOrden= example(dataDePokemon);
 llenarTarjetas(pokemonOrden);
+document.querySelector('#tipo').value = 'null'
+document.querySelector('#resistencia').value = 'null'
 });
 //para el botón descendente
 descendente.addEventListener('click',()=>{
   const pokemonOrdenReverso= anotherExample(dataDePokemon);
 llenarTarjetas(pokemonOrdenReverso);
+document.querySelector('#tipo').value = 'null'
+document.querySelector('#resistencia').value = 'null'
 });
 tipo.addEventListener('change', ()=>{ 
   const tipoPokemonSeleccionado = document.getElementById('tipo').value;
   const pokemonFiltrado = pokePorTipo (dataDePokemon,tipoPokemonSeleccionado);
   llenarTarjetas(pokemonFiltrado);
   document.querySelector('#resistencia').value = 'null';
+  console.log(pokemonFiltrado);
+  console.log((pokemonFiltrado.length*100)/251);
 })
 resistencia.addEventListener('change', ()=>{ 
   const tipoPokemonSeleccionado = document.getElementById('resistencia').value;

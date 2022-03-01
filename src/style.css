@@ -124,3 +124,25 @@ body{
       text-transform: capitalize;
   }
 
+  .foot{
+      background-color: black;
+      display:flex;
+      flex-direction: row;
+      max-width: 100%;
+      height: 60px;
+      box-sizing: border-box;
+      padding: 1%;
+
+}
+.estadisticas {
+    background-color: transparent;
+    border-radius: 18px;
+    font-family: roboto;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px;
+    border: 4px solid #afe978;
+    color: whitesmoke;
+    text-align: center;
+    width: 40%;
+}
