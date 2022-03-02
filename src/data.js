@@ -40,6 +40,12 @@ export const pokePorResistencia= (dataDePokemon, resistenciaPokeSeleccionada)=>{
   let filtroResistencia =dataDePokemon.filter(item =>item.resistant.includes(resistenciaPokeSeleccionada));
   return filtroResistencia;
 }
+
+export const statsPoke=(dataDePokemon)=>{
+  let filtroMayoria=dataDePokemon.filter(item=>item.type.includes("water"));
+  return parseInt((filtroMayoria.length*100)/251);
+
+}
  
 
 //items.sort(function (a, b) {
