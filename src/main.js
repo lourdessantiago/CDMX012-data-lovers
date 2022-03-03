@@ -4,6 +4,9 @@ import { anotherExample } from './data.js';
 import { pokePorTipo } from './data.js';
 import { pokePorResistencia } from './data.js'
 import { statsPoke } from './data.js'
+import { statsPoke2 } from './data.js'
+import { statsPoke3 } from './data.js'
+import { statsPokeSteel } from './data.js'
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 //Para mostrar las tarjetas de Pokemon en la pantalla
@@ -25,8 +28,14 @@ function mostrarCaracteristicas(item) {
 }
 llenarTarjetas(dataDePokemon);
 function estadicsPoke() {
-  const x = statsPoke(dataDePokemon);
-  allPokemon.innerHTML = `<p>Los pokemon de tipo agua representan el : ${x}%</p>`
+  const pokeMayoria = statsPoke(dataDePokemon);
+  const pokeMayoria2= statsPoke2(dataDePokemon);
+  const pokeMinoria= statsPoke3(dataDePokemon);
+  const pokeMinoriaSteel= statsPokeSteel(dataDePokemon)
+  allPokemon.innerHTML = `<p>Los pokemon de tipo agua representan el : ${pokeMayoria}%<br>
+  Los pokemon de tipo hierba representan el: ${pokeMayoria2}%<br>
+  Los pokemon de tipo dragon representan el :${pokeMinoria}%<br>
+  Los pokemon de tipo acero representan el : ${pokeMinoriaSteel}%</p>`
 }
 
 //Para el botón ascendente
