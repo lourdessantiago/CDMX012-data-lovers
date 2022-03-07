@@ -1,6 +1,6 @@
 // toda la interaccion en html / dom
-import { example } from './data.js';
-import { anotherExample } from './data.js';
+import { ordenAlfabeticoAZ } from './data.js';
+import { ordenAlfabeticoZA } from './data.js';
 import { pokePorTipo } from './data.js';
 import { pokePorResistencia } from './data.js'
 import { statsPoke } from './data.js'
@@ -40,14 +40,14 @@ function estadicsPoke() {
 
 //Para el botón ascendente
 ascendente.addEventListener('click', () => {
-  const pokemonOrden = example(dataDePokemon);
+  const pokemonOrden = ordenAlfabeticoAZ(dataDePokemon);
   llenarTarjetas(pokemonOrden);
   document.querySelector('#tipo').value = 'null'
   document.querySelector('#resistencia').value = 'null'
 });
 //para el botón descendente
 descendente.addEventListener('click', () => {
-  const pokemonOrdenReverso = anotherExample(dataDePokemon);
+  const pokemonOrdenReverso = ordenAlfabeticoZA(dataDePokemon);
   llenarTarjetas(pokemonOrdenReverso);
   document.querySelector('#tipo').value = 'null'
   document.querySelector('#resistencia').value = 'null'
@@ -57,8 +57,8 @@ tipo.addEventListener('change', () => {
   const pokemonFiltrado = pokePorTipo(dataDePokemon, tipoPokemonSeleccionado);
   llenarTarjetas(pokemonFiltrado);
   document.querySelector('#resistencia').value = 'null';
-  console.log(pokemonFiltrado);
-  console.log((pokemonFiltrado.length * 100) / 251);
+  //console.log(pokemonFiltrado);
+  //console.log((pokemonFiltrado.length * 100) / 251);
 })
 resistencia.addEventListener('change', () => {
   const tipoPokemonSeleccionado = document.getElementById('resistencia').value;

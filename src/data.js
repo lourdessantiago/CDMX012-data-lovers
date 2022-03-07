@@ -1,6 +1,6 @@
 // estas funciones son de ejemplo
 
-export const example = dataDePokemon => {
+export const ordenAlfabeticoAZ = dataDePokemon => {
   let ordenar = dataDePokemon.sort((a, b) => {
     if (a.name > b.name) {
       return 1;
@@ -15,7 +15,7 @@ export const example = dataDePokemon => {
   return ordenar;
 };
 
-export const anotherExample = dataDePokemon => {
+export const ordenAlfabeticoZA = dataDePokemon => {
   let ordenarInverso = dataDePokemon.sort((a, b) => {
     if (a.name > b.name) {
       return -1;
