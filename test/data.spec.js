@@ -1,4 +1,4 @@
-import { ordenAlfabeticoAZ, ordenAlfabeticoZA, pokePorTipo, pokePorResistencia, statsPoke } from '../src/data.js';
+import { ordenAlfabeticoAZ, ordenAlfabeticoZA, pokePorTipo, pokePorResistencia, statsPoke, statsPoke2, statsPoke3, statsPokeSteel} from '../src/data.js';
 
 
 describe('ordenAlfabeticoAZ', () => {
@@ -198,3 +198,65 @@ it ('Filtro mayoria', ()=>{
   expect (statsPoke(pokeMay,'water')).toBe(parseInt((resMay.length*100)/251));
 })
 })
+
+describe('Muestra el segundo porcentaje mas alto del tipo de pokemon', () => {
+  it ('statsPoke2 es una funcion', ()=>{
+    expect(typeof statsPoke2).toBe('function');
+  })
+  it ('Filtro segunda mayoria', ()=>{
+    const pokeMay2 =  [
+      { type: ["water", "electric", "grass", "fighting", "fairy"] },
+      { type: ["electric", "grass", "fighting", "fairy"] },
+      { type: ["water", "grass", "fighting", "fairy"] },
+      { type: ["water", "electric", "fighting", "fairy"] },
+    ]
+    const resMay2 =  [
+      { type: ["water", "electric", "grass", "fighting", "fairy"] },
+      { type: ["electric", "grass", "fighting", "fairy"] },
+      { type: ["water", "grass", "fighting", "fairy"] },
+    ]
+    expect (statsPoke2(pokeMay2,'grass')).toBe(parseInt((resMay2.length*100)/251));
+  })
+  })
+
+  describe('Muestra el segundo porcentaje mas bajo del tipo de pokemon', () => {
+    it ('statsPoke3 es una funcion', ()=>{
+      expect(typeof statsPoke3).toBe('function');
+    })
+    it ('Filtro segunda mayoria', ()=>{
+      const pokeMin =  [
+        { type: ["water", "electric", "dragon", "fighting", "fairy"] },
+        { type: ["electric", "dragon", "fighting", "fairy"] },
+        { type: ["water", "dragon", "fighting", "fairy"] },
+        { type: ["water", "electric", "fighting", "fairy"] },
+      ]
+      const resMin =  [
+        { type: ["water", "electric", "dragon", "fighting", "fairy"] },
+        { type: ["electric", "dragon", "fighting", "fairy"] },
+        { type: ["water", "dragon", "fighting", "fairy"] },
+      ]
+      expect (statsPoke3(pokeMin,'dragon')).toBe(parseInt((resMin.length*100)/251));
+    })
+    })
+
+    describe('Muestra el porcentaje mas bajo del tipo de pokemon', () => {
+      it ('statsPoke3 es una funcion', ()=>{
+        expect(typeof statsPokeSteel ).toBe('function');
+      })
+      it ('Filtro segunda mayoria', ()=>{
+        const pokeMin2 =  [
+          { type: ["water", "electric", "steel", "fighting", "fairy"] },
+          { type: ["electric", "steel", "fighting", "fairy"] },
+          { type: ["water", "steel", "fighting", "fairy"] },
+          { type: ["water", "electric", "fighting", "fairy"] },
+        ]
+        const resMin2 =  [
+          { type: ["water", "electric", "steel", "fighting", "fairy"] },
+          { type: ["electric", "steel", "fighting", "fairy"] },
+          { type: ["water", "steel", "fighting", "fairy"] },
+        ]
+        expect (statsPokeSteel(pokeMin2,'steel')).toBe(parseInt((resMin2.length*100)/251));
+      })
+      })
+  
+
