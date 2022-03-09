@@ -32,10 +32,13 @@ function estadicsPoke() {
   const pokeMayoria2= statsPoke2(dataDePokemon);
   const pokeMinoria= statsPoke3(dataDePokemon);
   const pokeMinoriaSteel= statsPokeSteel(dataDePokemon)
-  allPokemon.innerHTML = `<p>Los pokemon de tipo agua representan el : ${pokeMayoria}%<br>
+  allPokemon.innerHTML = `<img src="assets/poketransparentes.png" id=imagenEstats alt=""></img>
+  <div class="cuadradoPorcentajes">
+  <p>Los pokemon de tipo agua representan el : ${pokeMayoria}%<br>
   Los pokemon de tipo hierba representan el: ${pokeMayoria2}%<br>
   Los pokemon de tipo dragon representan el :${pokeMinoria}%<br>
-  Los pokemon de tipo acero representan el : ${pokeMinoriaSteel}%</p>`
+  Los pokemon de tipo acero representan el : ${pokeMinoriaSteel}%</p>
+  </div>`
 }
 
 //Para el botón ascendente
