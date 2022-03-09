@@ -34,7 +34,7 @@ function estadicsPoke() {
   const pokeMayoria2 = statsPoke2(dataDePokemon);
   const pokeMinoria = statsPoke3(dataDePokemon);
   const pokeMinoriaSteel = statsPokeSteel(dataDePokemon)
-  allPokemon.innerHTML = `<img src="assets/poketransparentes.png" id=imagenEstats alt=""></img>
+  allPokemon.innerHTML = `<img src="assets/poketransparente.png" id=imagenEstats alt=""></img>
   <div class="cuadradoPorcentajes">
   <p>Aqui algunos porcentajes de los tipos de Pokemon <br>
   <br>
