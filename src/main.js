@@ -36,10 +36,14 @@ function estadicsPoke() {
   const pokeMinoriaSteel = statsPokeSteel(dataDePokemon)
   allPokemon.innerHTML = `<img src="assets/poketransparentes.png" id=imagenEstats alt=""></img>
   <div class="cuadradoPorcentajes">
-  <p>Los pokemon de tipo agua representan el : ${pokeMayoria}%<br>
+  <p>Aqui algunos porcentajes de los tipos de Pokemon <br>
+  <br>
+  Los pokemon de tipo agua representan el : ${pokeMayoria}%<br>
   Los pokemon de tipo hierba representan el: ${pokeMayoria2}%<br>
   Los pokemon de tipo dragon representan el :${pokeMinoria}%<br>
-  Los pokemon de tipo acero representan el : ${pokeMinoriaSteel}%</p> 
+  Los pokemon de tipo acero representan el : ${pokeMinoriaSteel}%<br> 
+  <br>
+  En la grafica podrás observar cuantos Pokemon de cada tipo. <br> </p> 
   <canvas id="myChart" width="400" height="400"></canvas>`;
   estadisticasGrafica(dataDePokemon, 'water');
   const data = {
